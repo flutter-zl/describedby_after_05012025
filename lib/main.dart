@@ -14,15 +14,13 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(title: Text('Accessibility Demo')),
         body: Center(
-          child: Semantics(
-            // Define label and hint separately
-            label: 'Submit',
-            hint:
-                'this is a really  long long long long longlong long long hint',
-            child: ElevatedButton(
-              onPressed: () {
-                // Perform some action
-              },
+          child: ElevatedButton(
+            onPressed: () {
+              // Perform some action
+            },
+            child: Semantics(
+              hint:
+                  'this is a really long long hint',
               child: Text('Submit'),
             ),
           ),
